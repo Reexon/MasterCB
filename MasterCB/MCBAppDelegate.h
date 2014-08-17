@@ -7,9 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "SettingsViewController.h"
+#import "MCBClipBoard.h"
 
 @interface MCBAppDelegate : NSObject <NSApplicationDelegate>
-
+@property (nonatomic,strong) IBOutlet SettingsViewController *settingsViewController;
 @property (assign) IBOutlet NSWindow *window;
-
 @end

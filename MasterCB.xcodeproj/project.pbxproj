@@ -18,6 +18,9 @@
 		ABC721BC199FB1CA001A08B0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABC7219B199FB1C9001A08B0 /* Cocoa.framework */; };
 		ABC721C4199FB1CA001A08B0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABC721C2199FB1CA001A08B0 /* InfoPlist.strings */; };
 		ABC721C6199FB1CA001A08B0 /* MasterCBTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC721C5199FB1CA001A08B0 /* MasterCBTests.m */; };
+		ABC721D5199FB386001A08B0 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC721D3199FB386001A08B0 /* SettingsViewController.m */; };
+		ABC721D6199FB386001A08B0 /* SettingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC721D4199FB386001A08B0 /* SettingsViewController.xib */; };
+		ABC721D919A0889F001A08B0 /* MCBClipBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = ABC721D819A0889F001A08B0 /* MCBClipBoard.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,11 @@
 		ABC721C1199FB1CA001A08B0 /* MasterCBTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MasterCBTests-Info.plist"; sourceTree = "<group>"; };
 		ABC721C3199FB1CA001A08B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ABC721C5199FB1CA001A08B0 /* MasterCBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterCBTests.m; sourceTree = "<group>"; };
+		ABC721D2199FB386001A08B0 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		ABC721D3199FB386001A08B0 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		ABC721D4199FB386001A08B0 /* SettingsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsViewController.xib; sourceTree = "<group>"; };
+		ABC721D719A0889F001A08B0 /* MCBClipBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MCBClipBoard.h; sourceTree = "<group>"; };
+		ABC721D819A0889F001A08B0 /* MCBClipBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCBClipBoard.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +128,11 @@
 				ABC721B0199FB1CA001A08B0 /* MainMenu.xib */,
 				ABC721B3199FB1CA001A08B0 /* Images.xcassets */,
 				ABC721A2199FB1C9001A08B0 /* Supporting Files */,
+				ABC721D2199FB386001A08B0 /* SettingsViewController.h */,
+				ABC721D3199FB386001A08B0 /* SettingsViewController.m */,
+				ABC721D4199FB386001A08B0 /* SettingsViewController.xib */,
+				ABC721D719A0889F001A08B0 /* MCBClipBoard.h */,
+				ABC721D819A0889F001A08B0 /* MCBClipBoard.m */,
 			);
 			path = MasterCB;
 			sourceTree = "<group>";
@@ -235,6 +248,7 @@
 				ABC721B4199FB1CA001A08B0 /* Images.xcassets in Resources */,
 				ABC721AC199FB1C9001A08B0 /* Credits.rtf in Resources */,
 				ABC721B2199FB1CA001A08B0 /* MainMenu.xib in Resources */,
+				ABC721D6199FB386001A08B0 /* SettingsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,8 +267,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC721D5199FB386001A08B0 /* SettingsViewController.m in Sources */,
 				ABC721A8199FB1C9001A08B0 /* main.m in Sources */,
 				ABC721AF199FB1C9001A08B0 /* MCBAppDelegate.m in Sources */,
+				ABC721D919A0889F001A08B0 /* MCBClipBoard.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
