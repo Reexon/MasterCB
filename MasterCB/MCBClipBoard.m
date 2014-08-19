@@ -32,6 +32,7 @@
     }
     return false;
 }
+
 - (BOOL) writeToPasteBoard:(NSString *)stringToWrite
 {
     [_pasteBoard declareTypes:[NSArray arrayWithObject:NSPasteboardTypeString ] owner:nil];
@@ -47,6 +48,7 @@
     [clipBoardDict setObject:text forKey:keyCode];
     NSLog(@"Dict:%@",clipBoardDict);
 }
+
 -(NSString *)getFromPasteBoard:(NSString *)keyCode{
     return [clipBoardDict objectForKey:keyCode];
 }

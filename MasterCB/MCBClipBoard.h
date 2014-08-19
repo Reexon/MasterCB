@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MCBClipBoard : NSObject{
-    NSPasteboard *_pasteBoard;
-}
+@interface MCBClipBoard : NSObject
+
 @property NSPasteboard *pasteBoard;
 
 - (BOOL) writeToPasteBoard:(NSString *)stringToWrite;
 - (void) addToPasteBoard:(NSString *)text withKey:(NSString *)key;
 - (NSString *) readFromPasteBoard;
-- (NSString *)getFromPasteBoard:(NSString *) keyCode;
-- (void)listenForKey;
+- (NSString *) getFromPasteBoard:(NSString *) keyCode;
+- (void) listenForKey;
+
 @end

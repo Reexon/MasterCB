@@ -8,22 +8,11 @@
 
 #import "MCBAppDelegate.h"
 
-@implementation MCBAppDelegate{
-    MCBClipBoard *clipBoard;
-}
+@implementation MCBAppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // 1. Create the master View Controller
-    self.settingsViewController = [[SettingsViewController alloc] initWithNibName:@"SettingsViewController" bundle:nil];
-    
-    // 2. Add the view controller to the Window's content view
-    [self.window.contentView addSubview:self.settingsViewController.view];
-    self.settingsViewController.view.frame = ((NSView*)self.window.contentView).bounds;
-    clipBoard = [MCBClipBoard new];
-    [clipBoard listenForKey];
-    
-}
 
+}
 
 @end

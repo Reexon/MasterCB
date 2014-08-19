@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="5056"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+        <customObject id="-2" userLabel="File's Owner" customClass="MCBHistoryView">
             <connections>
                 <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
             </connections>
@@ -671,12 +671,114 @@
         <window title="MasterCB" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="481" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="702" height="310"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1028"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="481" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="702" height="310"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Dl-ZA-Vpw">
+                        <rect key="frame" x="-1" y="-1" width="704" height="312"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <clipView key="contentView" id="EwM-ok-H1A">
+                            <rect key="frame" x="1" y="17" width="702" height="294"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="firstColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="OsQ-CJ-ShI" id="Z5T-SG-qOf">
+                                    <rect key="frame" x="0.0" y="0.0" width="702" height="294"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <size key="intercellSpacing" width="3" height="2"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                    <tableColumns>
+                                        <tableColumn width="699" minWidth="10" maxWidth="3.4028234663852886e+38" id="Obz-M2-5VD">
+                                            <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left" title="ClipBoard History">
+                                                <font key="font" metaFont="smallSystem"/>
+                                                <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                            </tableHeaderCell>
+                                            <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="gLL-pY-XQc">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                        </tableColumn>
+                                    </tableColumns>
+                                    <connections>
+                                        <outlet property="dataSource" destination="lgG-st-YT9" id="qQV-EJ-GXy"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="20h-ox-bgZ">
+                            <rect key="frame" x="-100" y="-100" width="702" height="15"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="90U-4B-NE4">
+                            <rect key="frame" x="-14" y="17" width="15" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <tableHeaderView key="headerView" id="OsQ-CJ-ShI">
+                            <rect key="frame" x="0.0" y="0.0" width="702" height="17"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </tableHeaderView>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="2Dl-ZA-Vpw" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="-1" id="B7K-kK-ap4"/>
+                    <constraint firstItem="2Dl-ZA-Vpw" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="-1" id="DH7-Fl-NhB"/>
+                    <constraint firstAttribute="bottom" secondItem="2Dl-ZA-Vpw" secondAttribute="bottom" constant="-1" id="SNP-bH-037"/>
+                    <constraint firstAttribute="trailing" secondItem="2Dl-ZA-Vpw" secondAttribute="trailing" constant="-1" id="g5H-lJ-elJ"/>
+                </constraints>
             </view>
+            <toolbar key="toolbar" implicitIdentifier="28FB10EA-708E-4DB7-8DF7-C20600A82A44" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="Pbf-Ij-eL4">
+                <allowedToolbarItems>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="KLF-ip-Ess"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="RcS-fF-K07"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="BMv-Fc-U43"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="gtd-Sn-XC5"/>
+                    <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="ObE-ar-72P"/>
+                    <toolbarItem implicitItemIdentifier="0B90CD2B-41E5-464C-AEB4-20DA5D9508F5" label="Fast Search" paletteLabel="Fast Search" id="zs6-DX-J6r">
+                        <nil key="toolTip"/>
+                        <size key="minSize" width="96" height="22"/>
+                        <size key="maxSize" width="96" height="22"/>
+                        <searchField key="view" verticalHuggingPriority="750" id="wJN-sS-XJW">
+                            <rect key="frame" x="0.0" y="14" width="96" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="LvA-zd-ltJ">
+                                <font key="font" metaFont="system"/>
+                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </searchFieldCell>
+                        </searchField>
+                    </toolbarItem>
+                </allowedToolbarItems>
+                <defaultToolbarItems>
+                    <toolbarItem reference="ObE-ar-72P"/>
+                    <toolbarItem reference="zs6-DX-J6r"/>
+                </defaultToolbarItems>
+            </toolbar>
         </window>
+        <customObject id="lgG-st-YT9" customClass="MCBHistoryView">
+            <connections>
+                <outlet property="historyTable" destination="Z5T-SG-qOf" id="udh-6x-9AC"/>
+            </connections>
+        </customObject>
+        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="htY-gp-OM9">
+            <rect key="frame" x="0.0" y="0.0" width="38" height="17"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="Hdv-Qy-cvQ">
+                <font key="font" metaFont="system"/>
+                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+            </textFieldCell>
+        </textField>
+        <textFieldCell controlSize="small" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" title="clipHistoryCell" id="K3P-vr-IZ6">
+            <font key="font" metaFont="smallSystem"/>
+            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+        </textFieldCell>
     </objects>
 </document>
