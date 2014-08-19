@@ -13,9 +13,9 @@
 @property NSPasteboard *pasteBoard;
 
 - (BOOL) writeToPasteBoard:(NSString *)stringToWrite;
-- (void) addToPasteBoard:(NSString *)text withKey:(NSString *)key;
+- (void) addToClipDict:(NSString *)text withKey:(NSString *)key;
 - (NSString *) readFromPasteBoard;
-- (NSString *) getFromPasteBoard:(NSString *) keyCode;
+- (NSString *) getFromClipDict:(NSString *) keyCode;
 - (void) listenForKey;
 
 @end

@@ -72,7 +72,7 @@
  
  @discussion aggiunge al dizionario una stringa, che come key conterrà il keyCode del tasto sul quale l'utente vuole memorizzare la stringa
  */
--(void) addToPasteBoard:(NSString *)text withKey:(NSString *)keyCode{
+-(void) addToClipDict:(NSString *)text withKey:(NSString *)keyCode{
     [clipBoardDict setObject:text forKey:keyCode];
     NSLog(@"Aggiunto al clipBoardDict");
 }
@@ -82,7 +82,7 @@
  
  @discussion restituisce la stringa memorizzata nel keyCode passato
  */
--(NSString *)getFromPasteBoard:(NSString *)keyCode{
+-(NSString *)getFromClipDict:(NSString *)keyCode{
     return [clipBoardDict objectForKey:keyCode];
 }
 
@@ -102,13 +102,13 @@
          NSLog(@"KeyCode:%hu",[event keyCode]);
          
          if(registerKeyShortcut){
-             [self addToPasteBoard:[_pasteBoard stringForType:NSPasteboardTypeString]
+             [self addToClipDict:[_pasteBoard stringForType:NSPasteboardTypeString]
                            withKey:[NSString stringWithFormat:@"%hu",[event keyCode]]];
              registerKeyShortcut = false;
          }
          
          if([NSEvent modifierFlags] == paste){
-             NSString *text = [self getFromPasteBoard:[NSString stringWithFormat:@"%hu",[event keyCode]]];
+             NSString *text = [self getFromClipDict:[NSString stringWithFormat:@"%hu",[event keyCode]]];
              NSLog(@"Caricato :%hu",[event keyCode]);
              [_pasteBoard clearContents];
              [_pasteBoard setString:text forType:NSStringPboardType];
