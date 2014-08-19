@@ -42,7 +42,7 @@
         [_historyClip addObject:[_clipBoard.pasteBoard stringForType:NSPasteboardTypeString]];
         changeCount = [_clipBoard.pasteBoard changeCount];
         [self.historyTable reloadData];
-        NSLog(@"Update History Clip:%@", _historyClip);
+        
     }
     
 }
